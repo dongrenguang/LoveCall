@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+
+    <RelativeLayout
+        android:id="@+id/task_top"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@color/blue">
+        
+        <ImageView
+            android:id="@+id/task_cell_majorIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:paddingBottom="5dip"
+            android:src="@drawable/task_cell_person" />
+        
+        <TextView
+            android:id="@+id/task_cell_name"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/task_cell_majorIcon"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dip"
+            android:layout_marginRight="5dip"
+            android:text="妈妈"
+            android:textSize="18sp"
+            android:textColor="@color/white" />
+        
+        <TextView
+            android:id="@+id/task_cell_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dip"
+            android:layout_marginRight="5dip"
+            android:gravity="right"
+            android:text="每天22:30"
+            android:textSize="16sp"
+            android:textColor="@color/white" />
+
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/task_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+    <ImageView
+            android:id="@+id/task_cell_minorIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:paddingBottom="5dip"
+            android:src="@drawable/task_cell_comment" />
+
+        <TextView
+            android:id="@+id/task_cell_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/task_cell_minorIcon"
+            android:layout_centerVertical="true"
+            android:text="如果要用类比的方式形容旅行者的话，我觉得应该是猎手。在旅行的路途，捕猎景色、记忆、故事，当然还有美食。我因为要去奥斯陆围猎蒙克，不得不放弃了斯得哥尔摩，正如那位瑞典大伯说的那样：人们总是低估了城市与城市之间的距离。"
+            android:textSize="12sp" />
+        
+    </RelativeLayout>
+
+</LinearLayout>

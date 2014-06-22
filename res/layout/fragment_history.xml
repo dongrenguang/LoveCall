@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="58dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_marginBottom="5dip">
+
+            <Spinner
+                android:id="@+id/time_span_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               	android:foreground="@color/white"
+                android:entries="@+array/time_span_labels" />
+            <Spinner
+                android:id="@+id/show_type_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@+array/show_type_labels" />
+
+<!--             <Button
+                android:id="@+id/pick_time_span_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确定" /> -->
+
+       
+    </LinearLayout>
+<!-- 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        
+        android:text="注：蓝色表示呼入分钟数，红色表示呼出分钟数"
+        android:textSize="12sp" />  -->
+        
+   <RelativeLayout
+       		android:id="@+id/indication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:layout_marginBottom="5dip"
+            android:gravity="center" >
+            
+       <ImageView
+           android:id="@+id/blue_icon"
+           android:layout_width="13dp"
+           android:layout_height="13dp"
+           android:layout_alignParentTop="true"
+           android:layout_marginRight="3dip"
+           android:background="@color/blue" />
+
+       <TextView
+           android:id="@+id/blue_text"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentTop="true"
+           android:layout_marginRight="5dip"
+           android:layout_toRightOf="@id/blue_icon"
+           android:text="呼入分钟"
+           android:textSize="12sp" />
+
+       <ImageView
+           android:id="@+id/red_icon"
+           android:layout_width="13dp"
+           android:layout_height="13dp"
+           android:layout_alignParentTop="true"
+           android:layout_marginRight="3dip"
+           android:layout_toRightOf="@id/blue_text"
+           android:background="@color/pink" />
+
+       <TextView
+           android:id="@+id/read_text"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentTop="true"
+           android:layout_toRightOf="@id/red_icon"
+           android:text="呼出分钟"
+           android:textSize="12sp" />
+       
+        </RelativeLayout>
+        
+    
+  <LinearLayout
+        android:id="@+id/barview_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingTop="10dip"
+        android:paddingBottom="30dip"
+        android:paddingLeft="30dip" >
+    </LinearLayout>
+
+</LinearLayout>
