@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_color">#A9F5F2</color>
+    <color name="tasklist_background">#58D3F7</color>
+    <color name="orange">#F4B032</color>
+    <color name="blue">#7AC9C4</color>
+    <color name="pink">#F08080</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#DCDCDC</color>
+    <color name="background_gray">#EFEFEF</color>
+    <color name="black">#000000</color>
+    
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="time_span_labels">
+        <item>近6个月</item>
+        <item>近3个月</item>
+        <item>近1个月</item>
+        <item>近1周</item>
+    </string-array>
+    
+    <string-array name="show_type_labels">
+        <item>按个人显示</item>
+        <item>按组显示</item>
+    </string-array>
+    
+    <string-array name="add_time_labels">
+        <item>仅一次</item>
+        <item>每天</item>
+        <item>每周</item>
+        <item>每月</item>
+    </string-array>
+    
+    <string-array name="add_contact_labels">
+        <item>从通讯录中添加</item>
+      	<item>从特别关注中添加</item>
+    </string-array>
+
+</resources>
