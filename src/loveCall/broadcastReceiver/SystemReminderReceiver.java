@@ -11,28 +11,17 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import loveCall.activity.HistoryActivity;
-import loveCall.activity.ReminderActivity;
 import loveCall.activity.SystemReminderActivity;
 import loveCall.helper.DBHelper;
 import loveCall.model.CallRecord;
 import loveCall.model.History;
-import loveCall.model.HistoryByContact;
-import loveCall.model.SpecialPerson;
 import loveCall.model.SpecialPersonGroup;
-import loveCall.view.BarChartView;
-import android.R;
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
 
 public class SystemReminderReceiver extends BroadcastReceiver {
 	private DBHelper dbHelper;

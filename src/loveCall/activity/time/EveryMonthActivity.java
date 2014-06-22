@@ -82,10 +82,12 @@ public class EveryMonthActivity extends BaseActivity{
 		public void onNothingSelected(AdapterView<?> arg0) {
 		}
 	}
+	@Override
 	public void onResume() {
 		super.onResume();
 		MobclickAgent.onResume(this);
 		}
+		@Override
 		public void onPause() {
 		super.onPause();
 		MobclickAgent.onPause(this);

@@ -778,10 +778,12 @@ public class AddReminderActivity extends BaseActivity {
 		calendar.add(Calendar.MINUTE, 1);
 		contactFrom = FROM_INPUT;
 	}
+	@Override
 	public void onResume() {
 		super.onResume();
 		MobclickAgent.onResume(this);
 	}
+	@Override
 	public void onPause() {
 		super.onPause();
 		MobclickAgent.onPause(this);

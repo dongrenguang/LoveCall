@@ -1,12 +1,10 @@
 package loveCall.broadcastReceiver;
 
-import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
 
 import loveCall.helper.DBHelper;
 import loveCall.model.CallRecord;
-import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.ContentValues;
 import android.content.Context;
@@ -14,7 +12,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.provider.CallLog;
 import android.provider.CallLog.Calls;
-import android.util.Log;
 
 public class ReadHistoryAlarmReceiver extends BroadcastReceiver {
 	DBHelper dbHelper;

@@ -1,7 +1,5 @@
 package loveCall.model;
 
-import java.util.Comparator;
-
 public class History implements Comparable<History>{
 	private String name;
 	private String number;

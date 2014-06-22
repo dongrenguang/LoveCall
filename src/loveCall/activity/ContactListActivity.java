@@ -20,6 +20,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.BaseColumns;
 import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.View;
@@ -79,7 +80,7 @@ public class ContactListActivity extends Activity {
 	private void init() {
 		Uri uri = ContactsContract.CommonDataKinds.Phone.CONTENT_URI; 
 
-		String[] projection = { ContactsContract.CommonDataKinds.Phone._ID,
+		String[] projection = { BaseColumns._ID,
 				ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME,
 				ContactsContract.CommonDataKinds.Phone.DATA1, "sort_key",
 				ContactsContract.CommonDataKinds.Phone.CONTACT_ID,
@@ -191,10 +192,12 @@ public class ContactListActivity extends Activity {
 			finish();
 		}
 	}
+	@Override
 	public void onResume() {
 		super.onResume();
 		MobclickAgent.onResume(this);
 		}
+		@Override
 		public void onPause() {
 		super.onPause();
 		MobclickAgent.onPause(this);

@@ -2,12 +2,8 @@ package loveCall.broadcastReceiver;
 
 import java.util.Calendar;
 
-import javax.security.auth.PrivateCredentialPermission;
-
-import loveCall.activity.AddReminderActivity;
 import loveCall.activity.ReminderActivity;
 import loveCall.helper.DBHelper;
-import android.R.integer;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -15,7 +11,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.widget.Toast;
 
 public class EveryMonthAlarmReceiver extends BroadcastReceiver {
 		private String contactName;
@@ -82,7 +77,7 @@ public class EveryMonthAlarmReceiver extends BroadcastReceiver {
 		PendingIntent sender = PendingIntent.getBroadcast(
 				context, flag, intent, 0);
 
-		AlarmManager manager = (AlarmManager) context.getSystemService(context.ALARM_SERVICE);
+		AlarmManager manager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
 		manager.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), sender);
 	}
 
@@ -138,7 +133,7 @@ public class EveryMonthAlarmReceiver extends BroadcastReceiver {
 		PendingIntent sender = PendingIntent.getBroadcast(context, flag,
 				intent, 0);
 		AlarmManager am = (AlarmManager) context
-				.getSystemService(context.ALARM_SERVICE);
+				.getSystemService(Context.ALARM_SERVICE);
 		am.cancel(sender);
 //		Toast.makeText(context, "已经取消闹铃" + contactName, Toast.LENGTH_LONG)
 //				.show();

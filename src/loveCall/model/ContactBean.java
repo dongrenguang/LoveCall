@@ -1,7 +1,5 @@
 package loveCall.model;
 
-import android.util.Log;
-
 public class ContactBean {
 
 	private int contactId;

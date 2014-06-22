@@ -53,10 +53,12 @@ public class ReminderActivity extends BaseActivity {
 		finish();
 	}
 	
+	@Override
 	public void onResume() {
 		super.onResume();
 		MobclickAgent.onResume(this);
 		}
+		@Override
 		public void onPause() {
 		super.onPause();
 		MobclickAgent.onPause(this);

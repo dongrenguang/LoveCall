@@ -11,6 +11,7 @@ import com.example.loveCall.R;
 import com.umeng.analytics.MobclickAgent;
 
 public class SystemReminderActivity extends BaseActivity{
+	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_reminder);
@@ -50,10 +51,12 @@ public class SystemReminderActivity extends BaseActivity{
 		finish();
 	}
 	
+	@Override
 	public void onResume() {
 		super.onResume();
 		MobclickAgent.onResume(this);
 		}
+		@Override
 		public void onPause() {
 		super.onPause();
 		MobclickAgent.onPause(this);

@@ -71,10 +71,12 @@ public class OnlyOnceActivity extends BaseActivity implements OnDateChangedListe
 		
 	}
 	
+	@Override
 	public void onResume() {
 		super.onResume();
 		MobclickAgent.onResume(this);
 		}
+		@Override
 		public void onPause() {
 		super.onPause();
 		MobclickAgent.onPause(this);

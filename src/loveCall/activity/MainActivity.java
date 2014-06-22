@@ -7,7 +7,6 @@ import loveCall.broadcastReceiver.ReadHistoryAlarmReceiver;
 import loveCall.broadcastReceiver.SystemReminderReceiver;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
-import android.app.Service;
 import android.app.TabActivity;
 import android.content.Context;
 import android.content.Intent;
@@ -85,7 +84,7 @@ public class MainActivity extends TabActivity {
 		tabHost.setOnTabChangedListener(new OnTabChangedListener());
 		initFirstTab();
 
-		readHistoryAlarmManager = (AlarmManager) getSystemService(Service.ALARM_SERVICE);
+		readHistoryAlarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 		Intent intent = new Intent(this, ReadHistoryAlarmReceiver.class);
 		final PendingIntent pi = PendingIntent.getService(this, 0, intent, 0);
 		readHistoryAlarmManager.setRepeating(AlarmManager.RTC_WAKEUP, 0, 24*3600*1000, pi); 
@@ -111,11 +110,13 @@ public class MainActivity extends TabActivity {
 	//	public void onTaskListClick(View view) {
 	//		startActivity(new Intent(MainActivity.this, TaskListActivity.class));
 	//	}
+	@Override
 	public void onResume() {
 		super.onResume();
 		MobclickAgent.onResume(this);
 		
 	}
+	@Override
 	public void onPause() {
 		super.onPause();
 		MobclickAgent.onPause(this);

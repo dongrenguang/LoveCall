@@ -52,10 +52,12 @@ public class EveryDayActivity extends BaseActivity implements OnTimeChangedListe
 		// TODO Auto-generated method stub
 		
 	}
+	@Override
 	public void onResume() {
 		super.onResume();
 		MobclickAgent.onResume(this);
 		}
+		@Override
 		public void onPause() {
 		super.onPause();
 		MobclickAgent.onPause(this);
