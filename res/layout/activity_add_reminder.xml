@@ -21,7 +21,7 @@
             android:background="@drawable/add_person"
             android:onClick="selectContact" />
         
-        <TextView
+        <Button
             android:id="@+id/t1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,7 +30,8 @@
             android:text="设置联系人"
             android:textColor="@color/white"
             android:textSize="15sp"
-            android:onClick="selectContact" />
+            android:onClick="selectContact"
+            android:background="@color/orange" />
 
         <Button
             android:id="@+id/refresh"
@@ -43,15 +44,17 @@
             android:background="@drawable/refresh"
             android:onClick="clear" />
         
-        <TextView
-            android:layout_width="wrap_content"
+        <Button
+            android:layout_width="35dp"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/refresh"
+            android:background="@color/orange"
+            android:onClick="clear"
             android:text="清空"
             android:textColor="@color/white"
-            android:textSize="15sp"
-            android:onClick="clear" />
+            android:textSize="15sp" />
+
     </RelativeLayout>
 
     <EditText
@@ -89,7 +92,7 @@
             android:background="@drawable/add_alarm"
             android:onClick="selectTime" />
         
-        <TextView
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -97,7 +100,8 @@
             android:text="设置时间"
             android:textColor="@color/white"
             android:textSize="15sp"
-            android:onClick="selectTime" />
+            android:onClick="selectTime"
+            android:background="@color/orange" />
     </RelativeLayout>
 
     <EditText
