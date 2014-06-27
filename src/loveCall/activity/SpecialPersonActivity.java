@@ -28,7 +28,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnCreateContextMenuListener;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemLongClickListener;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ExpandableListView;
@@ -62,7 +62,7 @@ public class SpecialPersonActivity extends Activity implements OnClickListener {
 
 		vipAdapter = new SpecialPersonAdapter(this, contactGroupList);
 		expandlistView.setAdapter(vipAdapter);
-		expandlistView.setOnItemLongClickListener(new MyLongClickListener());
+		expandlistView.setOnItemClickListener(new MyClickListener());
 		expandlistView.setOnCreateContextMenuListener(new MyContextMenuListener());
 		//		expandlistView.setGroupIndicator(null); // 去掉默认带的箭头
 
@@ -168,15 +168,14 @@ public class SpecialPersonActivity extends Activity implements OnClickListener {
 		}
 	}
 
-	class MyLongClickListener implements OnItemLongClickListener{
+	class MyClickListener implements OnItemClickListener{
 
 		@Override
-		public boolean onItemLongClick(AdapterView<?> arg0, View v,
+		public void onItemClick(AdapterView<?> arg0, View v,
 				int pos, long id) {
 			pressedGroupId = (Integer)v.getTag(R.id.button1);
 			pressedChildId = (Integer)v.getTag(R.id.button2);
 			expandlistView.showContextMenu();
-			return false;
 		}
 
 	}
@@ -224,6 +223,7 @@ public class SpecialPersonActivity extends Activity implements OnClickListener {
 				})
 				.setNegativeButton("取消", null)
 				.show();
+				
 			}
 			return true;
 		default:

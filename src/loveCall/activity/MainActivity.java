@@ -36,6 +36,7 @@ public class MainActivity extends TabActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		MobclickAgent.updateOnlineConfig(this);
+		
 		//		setContentView(R.layout.activity_main);
 		tabHost = getTabHost();
 		UmengUpdateAgent.setUpdateOnlyWifi(false);

@@ -130,34 +130,6 @@ public class SpecialPersonAdapter extends BaseExpandableListAdapter {
 		ll.setTag(R.id.button2, -1);
 		return ll;
 
-		/*GroupViewHolder holder = new GroupViewHolder();
-		ImageView logo = new ImageView(context);
-        logo.setImageResource(R.drawable.group);
-        logo.setPadding(50, 0, 0, 0);
-        holder.imageView=logo;
-
-		holder.groupName = (TextView) convertView.findViewById(R.id.contact_group_name);
-		holder.groupName.setText(contactGroupList.get(groupPosition).getGroupName());
-
-		Button button=new Button(context);
-		button.setBackgroundResource(R.drawable.add_person);
-		holder.addButton =button;
-		button.setPadding(50, 0, 0, 0);
-		holder.addButton.setOnClickListener(new OnClickListener(){
-
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(context, ContactListActivity.class);
-				intent.putExtra("groupName", contactGroupList.get(groupPosition).getGroupName());
-				intent.putExtra("type", 0);
-				((Activity)context).startActivityForResult(intent, 0);
-			}
-
-		});
-		convertView.setTag(R.id.button1,groupPosition);
-		convertView.setTag(R.id.button2, -1);
-//		Log.d("set_tag_group", groupPosition+"");
-		return convertView;*/
 	}
 
 	@Override
@@ -187,24 +159,6 @@ public class SpecialPersonAdapter extends BaseExpandableListAdapter {
 		ll.setTag(R.id.button2, childPosition);
 		return ll;
 
-		/*ChildViewHolder viewHolder = null;
-		SpecialPerson contact = getChild(groupPosition, childPosition);
-		if (convertView != null) {
-			viewHolder = (ChildViewHolder) convertView.getTag();
-		} else {
-			viewHolder = new ChildViewHolder();
-			convertView = inflater.inflate(R.layout.special_person_item, null);
-			viewHolder.contactName = (TextView) convertView.findViewById(R.id.contact_name);
-			viewHolder.contactNumber = (TextView) convertView.findViewById(R.id.contact_number);
-		}
-		viewHolder.contactName.setText(contact.getContactName());
-		viewHolder.contactNumber.setText(contact.getNumber());
-
-		convertView.setTag(viewHolder);
-		convertView.setTag(R.id.button1, groupPosition);
-		convertView.setTag(R.id.button2, childPosition);
-		//		Log.d("set_tag_child", childPosition+"");
-		return convertView;*/
 	}
 
 	@Override
