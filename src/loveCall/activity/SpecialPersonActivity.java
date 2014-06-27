@@ -142,6 +142,16 @@ public class SpecialPersonActivity extends Activity implements OnClickListener {
 	}
 
 	private void addGroup(String groupName){
+		if(groupName.trim().equals("")){
+			Toast.makeText(SpecialPersonActivity.this,
+					"组名不能为空", Toast.LENGTH_SHORT).show();
+			return;
+		}
+		if(groupName.trim().length()>8){
+			Toast.makeText(SpecialPersonActivity.this,
+					"组名必须在8个字符以内", Toast.LENGTH_SHORT).show();
+			return;
+		}
 		for(SpecialPersonGroup g:contactGroupList){
 			if(groupName.trim().equals(g.getGroupName())){
 				Toast.makeText(SpecialPersonActivity.this,

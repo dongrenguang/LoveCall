@@ -94,23 +94,6 @@ public class MainActivity extends TabActivity {
 
 	}
 
-
-	//	public void onAddClick(View view) {
-	//		startActivity(new Intent(MainActivity.this, AddReminderActivity.class));
-	//
-	//	}
-	//
-	//	public void onHistoryClick(View view) {
-	//		startActivity(new Intent(MainActivity.this, HistoryActivity.class));
-	//	}
-	//
-	//	public void onSpecialClick(View view) {
-	//		startActivity(new Intent(MainActivity.this, SpecialPersonActivity.class));
-	//	}
-	//
-	//	public void onTaskListClick(View view) {
-	//		startActivity(new Intent(MainActivity.this, TaskListActivity.class));
-	//	}
 	@Override
 	public void onResume() {
 		super.onResume();
