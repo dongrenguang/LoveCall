@@ -2,6 +2,7 @@ package loveCall.helper;
 
 import java.io.File;
 import java.io.FileOutputStream;
+
 import loveCall.view.BarChartView;
 import android.app.Activity;
 import android.graphics.Bitmap;

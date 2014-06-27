@@ -27,7 +27,6 @@ import android.provider.CallLog;
 import android.provider.CallLog.Calls;
 import android.util.Log;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.LinearLayout;

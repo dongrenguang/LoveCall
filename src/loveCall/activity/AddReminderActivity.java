@@ -1,24 +1,29 @@
 package loveCall.activity;
 
-import java.awt.font.NumericShaper;
-import java.util.*;
+import java.util.Calendar;
 
-import loveCall.activity.time.*;
-import loveCall.broadcastReceiver.*;
-import loveCall.helper.*;
-import android.R.*;
-import android.annotation.SuppressLint;
-import android.app.*;
-import android.app.AlertDialog.Builder;
-import android.content.*;
+import loveCall.broadcastReceiver.AlarmReceiver;
+import loveCall.broadcastReceiver.EveryMonthAlarmReceiver;
+import loveCall.helper.DBHelper;
+import android.app.AlarmManager;
+import android.app.AlertDialog;
+import android.app.PendingIntent;
+import android.content.ContentValues;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import android.os.*;
-import android.util.*;
-import android.view.*;
-import android.view.ViewGroup.*;
-import android.widget.*;
-import android.widget.DatePicker.OnDateChangedListener;
-import android.widget.AdapterView.*;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.RelativeLayout;
+import android.widget.Spinner;
+import android.widget.TimePicker;
+import android.widget.Toast;
 
 import com.example.loveCall.R;
 import com.umeng.analytics.MobclickAgent;

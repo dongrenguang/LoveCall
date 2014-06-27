@@ -11,13 +11,13 @@ import org.achartengine.model.XYMultipleSeriesDataset;
 import org.achartengine.renderer.SimpleSeriesRenderer;
 import org.achartengine.renderer.XYMultipleSeriesRenderer;
 
-import com.example.loveCall.R;
-
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Paint.Align;
 import android.util.Log;
 import android.view.View;
+
+import com.example.loveCall.R;
 
 public class BarChartView {
 
