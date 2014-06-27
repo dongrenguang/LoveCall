@@ -23,9 +23,11 @@ import android.os.Bundle;
 import android.provider.BaseColumns;
 import android.provider.ContactsContract;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -40,6 +42,8 @@ public class ContactListActivity extends Activity {
 	private AsyncQueryHandler asyncQueryHandler;
 	private QuickAlphabeticBar alphabeticBar; 
 	String groupName;
+	Button returnButton;
+	Intent intent;
 
 	private Map<Integer, ContactBean> contactIdMap = null;
 
@@ -49,10 +53,10 @@ public class ContactListActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.fragment_contact_list);
 		contactList = (ListView) findViewById(R.id.contact_list);
-		Intent intent = getIntent();
+		intent = getIntent();
 		Log.d("type", intent.getIntExtra("type", -1)+"");
 		switch(intent.getIntExtra("type", -1)){
-		
+
 		case 0:
 			contactList.setOnItemClickListener(new ForSpecialListener());
 			break;
@@ -60,10 +64,10 @@ public class ContactListActivity extends Activity {
 			Log.d("add_forTaskListener", "");
 			contactList.setOnItemClickListener(new ForTaskListener());
 			break;
-			default:
-				finish();
+		default:
+			finish();
 		}
-		
+
 		alphabeticBar = (QuickAlphabeticBar) findViewById(R.id.fast_scroller);
 
 		asyncQueryHandler = new MyAsyncQueryHandler(getContentResolver());
@@ -71,12 +75,10 @@ public class ContactListActivity extends Activity {
 		dbHelper = DBHelper.getInstance(this,1);
 
 		init();
-		
+
 		ActionBar actionBar = getActionBar();
-	    actionBar.setDisplayHomeAsUpEnabled(true);
-
+		actionBar.setDisplayHomeAsUpEnabled(true);
 	}
-
 	private void init() {
 		Uri uri = ContactsContract.CommonDataKinds.Phone.CONTENT_URI; 
 
@@ -174,9 +176,21 @@ public class ContactListActivity extends Activity {
 				Toast.makeText(ContactListActivity.this,
 						"添加特别关注失败", Toast.LENGTH_SHORT).show();
 			}
-			
+
 		}
 	}
+	@Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        // TODO Auto-generated method stub
+        if(item.getItemId() == android.R.id.home)
+        {
+        	ContactListActivity.this.setResult(0, intent);
+        	ContactListActivity.this.finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 	class ForTaskListener implements OnItemClickListener{
 
 		@Override
@@ -196,10 +210,10 @@ public class ContactListActivity extends Activity {
 	public void onResume() {
 		super.onResume();
 		MobclickAgent.onResume(this);
-		}
-		@Override
-		public void onPause() {
+	}
+	@Override
+	public void onPause() {
 		super.onPause();
 		MobclickAgent.onPause(this);
-		}
+	}
 }
