@@ -387,6 +387,12 @@ public class AddReminderActivity extends BaseActivity {
 				numberEditText.setFocusable(true);
 				return;
 			}
+			if(contactName == null || contactName.equals("")){
+				Toast.makeText(this, "联系人姓名不能为空！", Toast.LENGTH_LONG).show();
+				nameEditText.setFocusable(true);
+				return;
+			}
+
 		} else if (contactFrom == FROM_CONTACTLIST) {
 			if (contactPhone == null || contactPhone.equals("")) {
 				Toast.makeText(this, "联系人号码不能为空！", Toast.LENGTH_LONG).show();
